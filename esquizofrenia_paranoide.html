@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauricioWeb</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/app.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__contenedor">
+            <div class="header__barra">
+                <a href="/">
+                    <img class="header__logo" src="img/logo.svg" alt="imagen logo">
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="index.html">Inicio</a>
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="blog.html">Blog</a>
+                    <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+                </nav>
+            </div><!--.header-barra-->
+        </div>
+    </header>
+
+     <br>
+    <main class="contenedor">
+        <div class="producto">
+            <img class="producto__imagen img-fluid" src="img/guitarra_02.jpg" alt="imagen guitarra">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">Síntomas Positivos:</h3>
+                <br>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> ALUCINACIONES:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES AUDITIVAS</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES VISUALES</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES OLFATIVAS Y GUSTATIVAS</h5>
+                <hr>
+                
+                <h4><i class="fas fa-light fa-virus"></i> DILIRIOS:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> DELIRIOS DE PERSECUCIÓN</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> RESISTENCIA A LA CONTRADICCIÓN</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> HIPERVIGILANCIA Y PENSAMIENTOS CODIFICADOS EN LOS MEDIOS DE COMUNICACIÓN</h5>
+
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> AISLAMIENTO SOCIAL Y DIFICULTADES EN LAS RELACIONES:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> AISLAMIENTO SOCIAL</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> DIFICULTADES EN LAS RELACIONES INTERPERSONALES.</h5>
+                <hr>
+            </div>
+        </div><!--./producto-->
+        <!--./producto-->
+
+        <!-- Tabla de Factores -->
+        <div class="mt-5">
+            <h2>FACTORES DE RIESGOS:</h2>
+            <hr>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>TIPO</th>
+                        <th>FACTOR</th>
+                        <th>DESCRIPCIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Genético</td>
+                        <td>Heredabilidad</td>
+                        <td>La heredabilidad de la esquizofrenia se estima en alrededor del 80%.</td>
+                    </tr>
+                    <tr>
+                        <td>Variantes Genéticas Raras</td>
+                        <td>Las mutaciones raras, como deleciones, duplicaciones o cambios en la secuencia genética, pueden influir significativamente en la predisposición a la esquizofrenia.</td>
+                    </tr>
+                        <td rowspan="4">Ambiental</td>
+                        <td>Vida en Entornos Urbanos</td>
+                        <td>Las personas en ciudades densamente pobladas tienen un riesgo 2 a 3 veces mayor de desarrollar esquizofrenia que quienes viven en áreas rurales.</td>
+                    </tr>
+                    <tr>
+                        <td>Eventos Traumáticos</td>
+                        <td>La exposición a traumas en la infancia, como abuso físico, emocional o la pérdida de un ser querido, está vinculada a un mayor riesgo de desarrollar esquizofrenia en la adultez.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Consumo de Sustancias</td>
+                        <td>El uso de drogas recreativas, especialmente durante la adolescencia, puede ser un factor de riesgo importante.</td>
+                    </tr>
+                    <tr>
+                        <td>Desnutrición Prenatal</td>
+                        <td>La desnutrición o infecciones durante el embarazo pueden afectar el desarrollo fetal.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer__contenedor footer__contenido">
+            <nav class="footer__nav">
+                <a class="footer__enlace" href="index.html">Inicio</a>
+                <a class="footer__enlace" href="nosotros.html">Nosotros</a>
+                <a class="footer__enlace" href="blog.html">Blog</a>
+                <a class="footer__enlace" href="tienda.html">Tienda</a>
+            </nav>
+            <p class="footer__copyright">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

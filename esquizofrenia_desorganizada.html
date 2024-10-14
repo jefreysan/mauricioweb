@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauricioWeb</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/app.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__contenedor">
+            <div class="header__barra">
+                <a href="/">
+                    <img class="header__logo" src="img/logo.svg" alt="imagen logo">
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="index.html">Inicio</a>
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="blog.html">Blog</a>
+                    <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+                </nav>
+            </div><!--.header-barra-->
+        </div>
+    </header>
+
+     <br>
+    <main class="contenedor">
+        <div class="producto">
+            <img class="producto__imagen img-fluid" src="img/guitarra_02.jpg" alt="imagen guitarra">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">Síntomas Positivos:</h3>
+                <br>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> LENGUAJE INCOHERENTE:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> SALTO DE IDEAS.</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> HABLA TANGENCIAL Y ASOCIACIONES SUELTAS.</h5>
+                <hr>
+                
+                <h4><i class="fas fa-light fa-virus"></i> CONDUCTA INUSUALES:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> MOVIMIENTOS REPETITIVOS Y POSTURAS INUSUALES.</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> COMPORTAMIENTO AGRESIVO O AMENAZANTE.</h5>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> AISLAMIENTO SOCIAL Y DIFICULTADES EN LAS RELACIONES:</h4>
+                <hr>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> AISLAMIENTO SOCIAL</h5>
+                <h5><i class="fas fa-regular fa-stethoscope"></i> DIFICULTADES EN LAS RELACIONES INTERPERSONALES.</h5>
+                <hr>
+            </div>
+        </div><!--./producto-->
+        <!--./producto-->
+
+        <!-- Tabla de Factores -->
+        <div class="mt-5">
+            <h2>FACTORES DE RIESGOS:</h2>
+            <hr>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>TIPO</th>
+                        <th>FACTOR</th>
+                        <th>DESCRIPCIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Genético</td>
+                        <td>Mutaciones de Novo</td>
+                        <td>Son alteraciones genéticas que ocurren por primera vez en el paciente y no se heredan de los padres.</td>
+                    </tr>
+                    <tr>
+                        <td>Genes Relacionados con la Esquizofrenia</td>
+                        <td>DISC1 regula el desarrollo y la señalización neuronal; NRG1 controla la diferenciación y mielinización; y DTNBP1 es clave para la liberación de neurotransmisores y el funcionamiento sináptico.</td>
+                    </tr>
+                    <tr>
+                        <td>Mecanismos Epigenéticos</td>
+                        <td>Como la metilación del ADN y las modificaciones de histonas, también juegan un papel crucial en la esquizofrenia.</td>
+                    </tr>
+                    <tr> 
+                        <td rowspan="3">Ambiental</td>
+                        <td>Estrés Psicosocial</td>
+                        <td>Se refiere a situaciones estresantes que impactan negativamente la vida diaria de una persona. </td>
+                    </tr>
+                    <tr>
+                        <td>Abuso Infantil y Trauma</td>
+                        <td>Afecta negativamente el desarrollo neurológico, incrementando la vulnerabilidad a trastornos psiquiátricos.</td>
+                    </tr>
+                    <tr>
+                        <td>Experiencias Migratorias</td>
+                        <td>La migración es una experiencia estresante que puede aumentar el riesgo de desarrollar esquizofrenia.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer__contenedor footer__contenido">
+            <nav class="footer__nav">
+                <a class="footer__enlace" href="index.html">Inicio</a>
+                <a class="footer__enlace" href="nosotros.html">Nosotros</a>
+                <a class="footer__enlace" href="blog.html">Blog</a>
+                <a class="footer__enlace" href="tienda.html">Tienda</a>
+            </nav>
+            <p class="footer__copyright">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

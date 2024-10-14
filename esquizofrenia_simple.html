@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauricioWeb</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/app.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__contenedor">
+            <div class="header__barra">
+                <a href="/">
+                    <img class="header__logo" src="img/logo.svg" alt="imagen logo">
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="index.html">Inicio</a>
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="blog.html">Blog</a>
+                    <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+                </nav>
+            </div><!--.header-barra-->
+        </div>
+    </header>
+
+    <br>
+    <main class="contenedor">
+        <div class="producto">
+            <img class="producto__imagen" src="img/guitarra_01.jpg" alt="imagen guitarra">
+            <div class="producto__contenido">
+                <h3 class="producto__nombre">Síntomas Positivos:</h3>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> ALUCINACIONES CENESTÉSICAS: </h4>
+                <hr>
+                <p class="producto__descripcion">Son sensaciones corporales extrañas, como quemazón, hormigueo o la sensación de que el cuerpo ha cambiado de forma o tamaño.Estas sensaciones pueden ser perturbadoras y causar malestar significativo, lo que contribuye a la discapacidad asociada con la esquizofrenia.</p>
+                <hr>                
+                <h4><i class="fas fa-light fa-virus"></i> ALUCINACIONES OLFATORIAS: </h4>
+                <hr>
+                <p class="producto__descripcion">Se refiere a la percepción de olores que no tienen una fuente externa real.Estas alucinaciones son comunes en la esquizofrenia simple cuando aparecen, y suelen ser desagradables.</p>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> IDEAS DELIRANTES: </h4>
+                <hr>
+                <p class="producto__descripcion">Son creencias falsas y rígidas que persisten a pesar de la evidencia en contra, lo que genera ansiedad y afecta la capacidad para funcionar normalmente.</p>
+                <hr>
+                <h4><i class="fas fa-light fa-virus"></i> LENGUAJE DESORGANIZADA: </h4>
+                <hr>
+                <p class="producto__descripcion">Este síntoma se manifiesta como una falta de coherencia en la comunicación, se refiere a una alteración en la capacidad de organizar y expresar pensamientos de manera clara, lo que dificulta la comunicación efectiva y contribuye a la incapacidad funcional en la vida diaria.</p>
+                <hr>           
+             </div>
+        </div><!--./producto-->
+
+        <!-- Tabla de Factores -->
+        <div class="mt-5">
+            <h2>FACTORES DE RIESGOS:</h2>
+            <hr>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>TIPO</th>
+                        <th>FACTOR</th>
+                        <th>DESCRIPCIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Genético</td>
+                        <td>Familiares</td>
+                        <td>Las personas con familiares de primer grado (padres, hermanos) que padecen esquizofrenia tienen un riesgo significativamente mayor de desarrollar la enfermedad.</td>
+                    </tr>
+                    <tr>
+                        <td>Genes específicos</td>
+                        <td>Varias variantes genéticas están asociadas con un mayor riesgo de esquizofrenia.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ambiental</td>
+                        <td>Complicaciones prenatales y perinatales</td>
+                        <td>Infecciones virales o bacterianas durante el embarazo pueden aumentar el riesgo de esquizofrenia en el niño.</td>
+                    </tr>
+                    <tr>
+                        <td>Estrés temprano y trauma</td>
+                        <td>Las experiencias traumáticas durante la infancia, como el abuso o la negligencia, pueden incrementar el riesgo.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer__contenedor footer__contenido">
+            <nav class="footer__nav">
+                <a class="footer__enlace" href="index.html">Inicio</a>
+                <a class="footer__enlace" href="nosotros.html">Nosotros</a>
+                <a class="footer__enlace" href="blog.html">Blog</a>
+                <a class="footer__enlace" href="tienda.html">Tienda</a>
+            </nav>
+            <p class="footer__copyright">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
