@@ -24,17 +24,19 @@ img {
     text-align: center; /* Centrar texto */
 }
 
+
+
 [class*="contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 95%;
 }
 [class*="heading"] {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     font-weight: 900;
     color: var(--primary);
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 
 .header {
@@ -179,12 +181,19 @@ img {
     align-items: center;
 }
 
+.producto__imagen {
+    border: 0.01rem solid #000; /* Cambia el color y el grosor según lo desees */
+    border-radius: 0.5rem; /* Opcional: para bordes redondeados */
+    padding: 0.5rem; /* Opcional: espacio entre la imagen y el borde */
+  }
+
 .producto__nombre {
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 .producto__descripcion {
     font-size: 1.6rem;
+    text-align: justify;
 }
 .producto__precio {
     color: var(--primary);
