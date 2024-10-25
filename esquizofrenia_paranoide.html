@@ -24,49 +24,55 @@
                     <img class="header__logo" src="img/logo.svg" alt="imagen logo">
                 </a>
                 <nav class="navegacion">
-                    <a class="navegacion__enlace" href="index.html">INICIO</a>
-                    <a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a>
+                    <a class="navegacion__enlace" href="index.html">Inicio</a>
+                    <a class="navegacion__enlace" href="nosotros.html">Sobre Mi</a>
                 </nav>
             </div><!--.header-barra-->
         </div>
     </header>
-
-     <br>
-    <main class="contenedor">
-        <div class="producto">
-            <div class="producto__contenido">
-                <h3 class="producto__nombre">Síntomas Positivos:</h3>
-                <br>
-                <hr>
-                <h4><i class="fas fa-light fa-virus"></i> ALUCINACIONES:</h4>
-                <hr>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES AUDITIVAS:</h4>
-                <p class="producto__descripcion">Los pacientes pueden escuchar voces de personas ausentes, a menudo críticas, acusatorias o directivas, que comentan sus acciones, emiten juicios negativos o discuten entre sí.</p>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES VISUALES:</h4>
-                <p class="producto__descripcion">Los pacientes pueden experimentar visiones de personas, figuras, luces o escenas completas.</p>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES OLFATIVAS Y GUSTATIVAS:</h4>
-                <p class="producto__descripcion">Los pacientes pueden percibir olores o sabores inexistentes, a menudo vinculados a creencias delirantes, como la idea de estar siendo envenenados. Esto puede llevar al rechazo de alimentos y bebidas, incrementando la paranoia.</p>
-                <hr>
-                <h4><i class="fas fa-light fa-virus"></i> DILIRIOS:</h4>
-                <hr>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> DELIRIOS DE PERSECUCIÓN:</h4>
-                <p class="producto__descripcion">Implican creencias falsas y persistentes sobre ser perseguido, acosado o engañado. </p>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> RESISTENCIA A LA CONTRADICCIÓN:</h4>
-                <p class="producto__descripcion">Se refiere a la inmutabilidad de las creencias delirantes, incluso ante evidencia lógica y objetiva que intente refutarlas. </p>
-                <h4><i class="fas fa-regular fa-stethoscope"></i> HIPERVIGILANCIA Y PENSAMIENTOS CODIFICADOS EN LOS MEDIOS DE COMUNICACIÓN:</h4>
-                <p class="producto__descripcion">Se refiere a un estado de alerta constante y extrema, en el que el paciente está siempre atento a posibles amenazas, incluso en ausencia de peligro real.</p>
-                <hr>
+    <main class="productos productos__contenedor">
+        <h2 class="productos__heading">Síntomas Positivos</h2>
+        <div class="productos__grid">    
+            <div class="producto">
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre"> ALUCINACIONES</h3>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES AUDITIVAS:</h4>
+                    <p class="producto__descripcion">Los pacientes pueden escuchar voces de personas ausentes, a menudo críticas, acusatorias, que comentan sus acciones.</p>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES VISUALES:</h4>
+                    <p class="producto__descripcion">Los pacientes pueden experimentar visiones de personas, figuras, luces o escenas completas.</p>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES OLFATIVAS Y GUSTATIVAS:</h4>
+                    <p class="producto__descripcion"> Los pacientes pueden percibir olores o sabores que no existen, a menudo relacionados con sus creencias delirantes.</p>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> ALUCINACIONES TÁCTILES:</h4>
+                    <p class="producto__descripcion"> Los pacientes pueden sentir sensaciones en su cuerpo que no tienen origen real, como la sensación de insectos arrastrándose sobre la piel.</p>
+                </div>
             </div>
-            <img class="producto__imagen img-fluid" src="img/esquizofrenia_paranoide.jfif" alt="imagen guitarra">
-        </div><!--./producto-->
-        <!--./producto-->
+                
+                
+            <div class="producto">
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">  DELIRIOS</h3>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> DELIRIOS DE PERSECUCIÓN:</h4>
+                    <p class="producto__descripcion"> Implican creencias falsas y persistentes sobre ser perseguido, acosado o engañado,  suelen durar más de un mes y su contenido puede parecer real, aunque exista otra patología subyacente. </p>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> RESISTENCIA A LA CONTRADICCIÓN:</h4>
+                    <p class="producto__descripcion">Se refiere a la inmutabilidad de las creencias delirantes, incluso ante evidencia lógica y objetiva que intente refutarlas. </p>
+                    <h4><i class="fas fa-regular fa-stethoscope"></i> HIPERVIGILANCIA Y PENSAMIENTOS CODIFICADOS EN LOS MEDIOS DE COMUNICACIÓN:</h4>
+                    <p class="producto__descripcion">Se refiere a un estado de alerta constante y extrema, en el que el paciente está siempre atento a posibles amenazas, incluso en ausencia de peligro real.</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto__contenido">
+                    <h3 class="producto__nombre">Imagen Relacionada</h3>
+                    <img class="producto__imagen" src="img/esquizofrenia_paranoide.jfif" alt="imagen guitarra">
+                 </div>
+            </div>
+        </div>
+</main>
 
-        <!-- Tabla de Factores -->
+<main class="productos productos__contenedor">
+    <h2 class="productos__heading">Factores de Riesgo</h2>
         <div class="mt-5">
-            <h2>FACTORES DE RIESGOS:</h2>
-            <hr>
             <table class="table">
-                <thead class="thead-dark">
+                <thead class="thead-light">
                     <tr>
                         <th>TIPO</th>
                         <th>FACTOR</th>
@@ -110,8 +116,8 @@
     <footer class="footer">
         <div class="footer__contenedor footer__contenido">
             <nav class="footer__nav">
-                <a class="footer__enlace" href="index.html">INICIO</a>
-                <a class="footer__enlace" href="nosotros.html">NOSOTROS</a>
+                <a class="footer__enlace" href="index.html">Inicio</a>
+                <a class="footer__enlace" href="nosotros.html">Sobre Mi</a>
             </nav>
             <p class="footer__copyright"></p>
         </div>

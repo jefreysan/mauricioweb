@@ -1,46 +1,51 @@
 :root {
-    --primary: #e99401;
+    --primary: #ff5252;
     --negro: #262626;
     --blanco: #FFF;
     --fuente-principal: 'Outfit', sans-serif;
 }
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 body {
     font-size: 2rem;
     font-family: var(--fuente-principal);
     line-height: 1.5;
 }
+
 img {
     max-width: 100%;
 }
+
 .table th, .table td {
-    font-size: 1.2rem; /* Tamaño de fuente más grande */
-    text-align: center; /* Centrar texto */
+    font-size: 1.2rem;
+    text-align: center;
 }
-
-
 
 [class*="contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 95%;
 }
+
 [class*="heading"] {
     font-size: 3rem;
     text-align: center;
+    text-transform: uppercase;
     font-weight: 900;
     color: var(--primary);
     margin: 2rem 0;
 }
 
 .header {
-    background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgba(31, 30, 30, 0.7)), url(../img/header.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(31, 30, 30, 0.7)), url(../img/header.jpg);
     background-size: cover;
     background-position: 50%;
     padding: 5rem 0;
@@ -50,35 +55,21 @@ img {
 .header__guitarra {
     display: none;
 }
+
 @media (min-width: 992px) { 
     .header__guitarra {
         display: block;
         position: absolute;
         right: 0;
         bottom: 0;
-
-        /* animation-name: mostrarImagen;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1; */
-
-        animation: 1s ease-in-out 0s 1 mostrarImagen;
+        animation: 1s ease-in-out mostrarImagen;
     }
 }
 
 @keyframes mostrarImagen {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0rem);
-    }
+    0% { opacity: 0; transform: translateX(-10rem); }
+    50% { opacity: 0; }
+    100% { opacity: 1; transform: translateX(0rem); }
 }
 
 .header__barra {
@@ -86,6 +77,7 @@ img {
     flex-direction: column;
     align-items: center;
 }
+
 @media (min-width: 768px) { 
     .header__barra {
         flex-direction: row;
@@ -104,11 +96,13 @@ img {
     position: relative;
     z-index: 1;
 }
+
 @media (min-width: 768px) { 
     .navegacion {
         margin-top: 0;
     }
 }
+
 .navegacion__enlace {
     color: var(--blanco);
     text-decoration: none;
@@ -116,33 +110,37 @@ img {
     padding: .5rem;
     font-size: 1.4rem;
     font-weight: 700;
-    transition-property: background-color;
-    transition-duration: .3s;
+    transition: background-color .3s;
 }
+
 .navegacion__enlace:hover {
     background-color: var(--primary);
 }
 
 .modelo {
     color: var(--blanco);
-    margin-top: 5rem;
+    margin-top: 10rem;
     text-align: center;
 }
+
 @media (min-width: 768px) { 
     .modelo {
         text-align: left;
         width: 50%;
     }
 }
+
 .modelo__nombre {
     font-size: 4rem;
 }
+
 .modelo__precio {
     font-size: 6rem;
     color: var(--primary);
     font-weight: 900;
     line-height: 0;
 }
+
 .modelo__enlace {
     margin-top: 2rem;
     text-decoration: none;
@@ -152,22 +150,27 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.4rem;
-    transition-property: background-color;
-    transition-duration: .3s;
+    transition: background-color .3s;
 }
+
 .modelo__enlace:hover {
     background-color: var(--primary);
 }
 
 .productos__grid {
     display: grid;
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+    padding: 2rem;
 }
+
 @media (min-width: 768px) { 
     .productos__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (min-width: 1200px) { 
     .productos__grid {
         grid-template-columns: repeat(3, 1fr);
@@ -176,107 +179,140 @@ img {
 
 .producto {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    column-gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     align-items: center;
+    padding: 1.5rem; /* Aumenta el espacio interno */
+    border: 1px solid #ccc; /* Un color más suave para el borde */
+    border-radius: 10px; /* Esquinas más redondeadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Añadir transición para el color del borde */
 }
+
+.producto:hover {
+    transform: translateY(-5px); /* Aumenta el desplazamiento al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+    border-color: var(--primary); /* Cambiar el color del borde al pasar el ratón */
+}
+
 
 .producto__imagen {
-    border: 0.01rem solid #000; /* Cambia el color y el grosor según lo desees */
-    border-radius: 0.5rem; /* Opcional: para bordes redondeados */
-    padding: 0.5rem; /* Opcional: espacio entre la imagen y el borde */
-  }
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
 
 .producto__nombre {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
+    text-align: center;
+    color: var(--negro); 
 }
+
+.productos__introduccion {
+    display: grid;
+    align-items: center;
+    padding: 2rem; /* Aumenta el espacio interno para mayor comodidad */
+    max-width: 100rem; /* Limitar el ancho del contenido */
+    margin: 2rem auto; /* Centrar el contenido y agregar más espacio superior e inferior */
+    border-radius: 12px; /* Bordes redondeados más suaves */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para mayor profundidad */
+    border: 1px solid #e0e0e0; /* Color más suave y moderno para el borde */
+    background-color: #ffffff; /* Color de fondo blanco para claridad */
+}
+
+
 .producto__descripcion {
-    font-size: 1.6rem;
-    text-align: justify;
+    font-size: 1.6rem; /* Tamaño de fuente para la descripción */
+    line-height: 1.6em; /* Espaciado entre líneas */
+    color: var(--negro); /* Color negro para el texto */
+    text-align: justify; /* Justificar el texto para mejor legibilidad */
 }
-.producto__precio {
-    color: var(--primary);
-    font-size: 6rem;
-    font-weight: 900;
-    margin: 0;
+
+
+.producto__listado li {
+    padding: 1rem; /* Espacio interno */
+    margin-bottom: 1rem; /* Espacio entre los ítems */
 }
+
+
+
+@media (max-width: 600px) {
+    .productos__introduccion {
+        padding: 1rem; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .productos__introduccion h2 {
+        font-size: 2rem; /* Ajustar el tamaño del encabezado */
+    }
+
+    .productos__introduccion {
+        font-size: 1.4rem; /* Ajustar el tamaño de la descripción */
+    }
+}
+
+
 .producto__enlace {
     margin-top: 2rem;
     display: block;
     text-decoration: none;
     color: var(--negro);
-    padding: 1rem 5rem;
+    padding: 1rem 3rem; /* Ajustar el padding para un aspecto más equilibrado */
     border: 2px solid var(--primary);
     text-align: center;
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 700; /* Ajustar el peso de la fuente para mayor legibilidad */
     text-transform: uppercase;
-    transition-property: background-color;
-    transition-duration: .3s;
+    border-radius: 5px; /* Añadir esquinas redondeadas */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Añadir transición para transformaciones */
 }
+
 .producto__enlace:hover {
-    background-color: var(--primary);
-    color: var(--blanco);
+    background-color: var(--primary); /* Cambiar el color de fondo al pasar el ratón */
+    color: var(--blanco); /* Cambiar el color del texto al pasar el ratón */
+    transform: scale(1.05); /* Agrandar ligeramente el botón al pasar el ratón */
 }
+
 .producto__formulario {
     display: flex;
     flex-direction: column;
 }
+
 .producto__label {
     font-size: 2.2rem;
     margin-right: 1rem;
 }
+
 .producto__cantidad {
     border: 2px solid var(--primary);
     padding: 1rem;
     text-align: center;
 }
+
 .producto__cantidad:focus-visible {
     outline: 2px solid var(--primary);
     border: none;
 }
-.producto__agregar-carrito {
-    margin-top: 3rem;
-    display: block;
-    background-color: var(--primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    text-align: center;
-    padding: 2rem 5rem;
-    color: var(--blanco);
-    font-size: 1.8rem;
-    font-weight: 700;
-    transition-property: background-color;
-    transition-duration: .3s;
-}
-.producto__agregar-carrito:hover {
-    background-color: var(--negro);
-    cursor: pointer;
-}
+
+
 .cursos {
-    background-image: linear-gradient(to right, rgb(0 0 0 / .65), rgb( 0 0 0 / .65)), url('../img/cursos_bg.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../img/cursos_bg.jpg');
     padding: 10rem 0;
     margin-top: 10rem;
     background-size: cover;
     background-position: 50%;
 }
-@media (min-width: 768px) { 
-    .cursos__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
+
 .cursos__contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 @media (min-width: 768px) { 
-    .cursos__contenido {
-        grid-column: 2 / 3;
+    .cursos__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
     }
 }
 
@@ -285,6 +321,7 @@ img {
     text-align: center;
     font-size: 2.4rem;
 }
+
 .cursos__enlace {
     color: var(--blanco);
     margin-top: 2rem;
@@ -295,9 +332,9 @@ img {
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 700;
-    transition-property: background-color;
-    transition-duration: .3s;
+    transition: background-color .3s;
 }
+
 .cursos__enlace:hover {
     background-color: var(--primary);
     color: var(--blanco);
@@ -307,32 +344,39 @@ img {
     display: grid;
     gap: 4rem;
 }
+
 @media (min-width: 768px) { 
     .blog__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (min-width: 992px) { 
     .blog__grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .blog__grid--pagina {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 .entrada {
     max-width: 80rem;
     margin: 0 auto;
 }
+
 .entrada__contenido {
     padding: 2rem;
 }
+
 .entrada__titulo {
     font-weight: 400;
     font-size: 2.8rem;
     margin: 0;
     line-height: 1.2;
 }
+
 .entrada__fecha {
     font-size: 1.6rem;
     color: var(--primary);
@@ -349,9 +393,9 @@ img {
     font-size: 1.2rem;
     font-weight: 900;
     text-transform: uppercase;
-    transition-property: background-color;
-    transition-duration: .3s;
+    transition: background-color .3s, color .3s;
 }
+
 .entrada__enlace:hover {
     background-color: var(--primary);
     color: var(--blanco);
@@ -362,40 +406,47 @@ img {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 .footer {
-    margin-top: 5rem;
-    background-color: var(--negro);
-    padding: 5rem 0;
+    background-color: var(--negro); /* Fondo oscuro */
+    color: var(--blanco); /* Texto blanco */
+    padding: 2rem 0; /* Espacio superior e inferior */
 }
+
 @media (min-width: 768px) { 
     .footer__contenido {
         display: flex;
         justify-content: space-between;
     }
 }
+
 .footer__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 @media (min-width: 768px) { 
     .footer__nav {
         flex-direction: row;
         gap: 2rem;
     }
 }
+
 .footer__enlace {
     font-size: 2.8rem;
     color: var(--blanco);
     text-decoration: none;
     font-weight: 700;
 }
+
 .footer__enlace:hover {
     color: var(--primary);
 }
+
 .footer__copyright {
     font-size: 2.8rem;
     color: var(--blanco);
@@ -403,13 +454,127 @@ img {
     text-align: center;
 }
 
-.nosotros__grid {
-    display: grid;
-    gap: 4rem;
+
+
+.producto__esquizofrenia {
+    display: grid;                /* Enable grid layout */
+    grid-template-columns: 1fr;   /* One column layout */
+    background-color: #f9f9f9;    /* Light background for contrast */
+    padding: 20px;                /* Add padding for spacing */
+    border-radius: 8px;           /* Rounded corners for a softer look */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px;             /* Limit width for better readability */
+    margin: 20px auto;            /* Center the element and add margin */
+    gap: 15px;                    /* Space between grid items */
 }
+
+.sintoma {
+    display: grid;                /* Enable grid layout for each symptom */
+    grid-template-columns: auto 1fr; /* Two columns: icon and text */
+    background-color: #fff;       /* White background for each symptom */
+    border: 1px solid #ddd;       /* Light border for definition */
+    border-radius: 4px;           /* Rounded corners */
+    padding: 15px;                /* Padding inside each symptom box */
+}
+
+.sintoma h4 {
+    color: #007BFF;               /* Highlighted color for symptom titles */
+    margin: 0;                    /* Remove default margin */
+    display: flex;                /* Flex to align icon and text */
+    align-items: center;          /* Center items vertically */
+}
+
+
 @media (min-width: 768px) { 
     .nosotros__grid {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
+}
+
+
+.table {
+    width: 100%;                     /* Full width for responsiveness */
+    border-collapse: collapse;       /* Collapse borders for cleaner look */
+    margin: 20px 0;                  /* Spacing around the table */
+}
+
+.table th, .table td {
+    padding: 15px;                   /* Padding for cell content */
+    text-align: center; 
+    font-size: 1.5rem; 
+    border: 1px solid #ddd;          /* Light border for definition */
+}
+
+.table th {
+    background-color: #007BFF;       /* Background color for header */
+    color: #fff;                     /* Text color for header */
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;       /* Highlight on row hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table {
+        display: block;               /* Make the table block for small screens */
+        overflow-x: auto;             /* Allow horizontal scrolling */
+    }
+    .table th, .table td {
+        display: block;               /* Stack table cells */
+        text-align: right;            /* Align text to the right */
+        position: relative;           /* Positioning for pseudo-elements */
+    }
+    .table th::before, .table td::before {
+        content: attr(data-label);    /* Use data attributes for labels */
+        position: absolute;           /* Position labels */
+        left: 10px;                   /* Spacing from left */
+        font-weight: bold;            /* Bold for emphasis */
+        text-align: left;             /* Align to the left */
+    }
+}
+
+
+.nosotros__contenedor {
+    max-width: 800px;               /* Limit maximum width */
+    margin: 20px auto;              /* Center the container */
+    padding: 20px;                  /* Add padding for spacing */
+    background-color: #fefeff;      /* Light background */
+    border-radius: 8px;             /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.nosotros__heading {
+    text-align: center;             /* Center the heading */
+    color: #333;                    /* Darker text color */
+    margin-bottom: 20px;            /* Space below the heading */
+}
+
+.nosotros__grid {
+    display: flex;                  /* Flexbox for layout */
+    align-items: center;            /* Center vertically */
+    gap: 20px;                      /* Space between image and text */
+}
+
+.producto__imagen {
+    width: 150px;                   /* Fixed width for the image */
+    height: auto;                   /* Maintain aspect ratio */
+    border-radius: 50%;             /* Circular image */
+    border: 3px solid var(--primary);      /* Blue border for emphasis */
+}
+
+.nosotros__contenido {
+    flex: 1;                        /* Allow content to take remaining space */
+}
+
+.nosotros__nombre {
+    font-size: 1.5em;               /* Larger font for name */
+    color: #007BFF;                 /* Highlight color for the name */
+    margin-bottom: 10px;            /* Space below the name */
+}
+
+.nosotros__info {
+    color: #555;                    /* Softer text color for info */
+    line-height: 1.6;               /* Improve line spacing */
 }
