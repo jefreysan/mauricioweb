@@ -557,13 +557,6 @@ img {
     gap: 20px;                      /* Space between image and text */
 }
 
-.producto__imagen {
-    width: 150px;                   /* Fixed width for the image */
-    height: auto;                   /* Maintain aspect ratio */
-    border-radius: 50%;             /* Circular image */
-    border: 3px solid var(--primary);      /* Blue border for emphasis */
-}
-
 .nosotros__contenido {
     flex: 1;                        /* Allow content to take remaining space */
 }
